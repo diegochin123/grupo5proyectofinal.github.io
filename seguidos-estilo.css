@@ -1,0 +1,167 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #70160E;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Encabezado y navegación */
+.barranavega {
+    background-image:url(imagenutp4.jpg);
+    background-size:contain;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.barranavega img {
+    max-height: 100px;
+    margin-bottom: 5px;
+}
+
+.barranavega h1 {
+    flex: 1 1 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.links li {
+    margin-right: 20px;
+}
+
+.links a {
+    color: white;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    padding: 10px 15px;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: background-color 0.3s;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.links :hover {
+    background-color: #ff2828;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+/* Ícono links */
+.links img {
+    width: 20px;
+    /* Tamaño pequeño para la imagen */
+    height: 20px;
+    margin-right: 5px;
+    /* Espacio entre la imagen y el texto */
+    vertical-align: middle;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilo para seguidos */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+/* Wrapper para organizar los usuarios seguidos */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Estilo de los rectángulos de los usuarios seguidos */
+.usuario-seguido {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1.5px solid #4e5059;
+    border-radius: 40px;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.usuario-seguido:hover {
+    transform: scale(1.05);
+    background-color: #fdc4c2;
+}
+
+/* Estilo de la imagen de perfil */
+.usuario-seguido img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Foto circular */
+    margin-right: 15px;
+    border: 1px solid #4e5059; /* Borde de la imagen */
+}
+
+/* Nombre de usuario */
+.usuario-seguido span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 10px;
+    }
+}

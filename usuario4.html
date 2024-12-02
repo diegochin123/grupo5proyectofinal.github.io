@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Social Miniatura - Perfil</title>
+    <link rel="stylesheet" href="usuario-estilo.css"> <!-- Enlace a CSS externo -->
+</head>
+
+<body>
+    <header>
+        <div class="barranavega">
+            <img src="red_social1.png" alt="Descripción de la imagen de la red social" />
+            <h1>Bienvenido a Mi Red Social</h1>
+            <ul class="links">
+                <li><a href="index.html"><img src="inicio.png" alt="Inicio">Inicio</a></li>
+                <li><a href="perfil.html"><img src="perfil.png" alt="Perfil">Perfil</a></li>
+                <li><a href="seguidos.html"><img src="seguir.png" alt="Seguidos">Seguidos</a></li>
+                <li><a href="mensajes.html"><img src="mensaje.png" alt="Mensaje">Mensajes</a></li>
+                <li><a href="https://class.utp.edu.pe" target="_blank"><img src="favicon.ico" alt="UTP" class="icono-btn">UTP+class</a></li>
+                <li><a href="https://portal.utp.edu.pe" target="_blank"><img src="favicon.ico" alt="UTP" class="icono-btn">UTP+Portal</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="perfil">
+        <h2>Detalles del Usuario</h2>
+        <div class="perfil-container">
+            <!-- Imagen de perfil -->
+            <div class="imagen-perfil">
+                <img id="imagen-perfil" src="usuario4.jpeg" alt="Imagen de usuario" style="cursor: pointer;">
+            </div>
+            <!-- Información del usuario -->
+            <div class="info-usuario">
+                <p><strong>Nombre:</strong> <span id="nombre">Luis Manuel Saavedra Sandoval</span></p>
+                <p><strong>Facultad:</strong> <span id="facultad">Ingeniería</span></p>
+                <p><strong>Carrera:</strong> <span id="carrera">Ingeniería de Sistemas e Informática</span></p>
+                <p><strong>Cursos dictando:</strong> <span id="cursos">4</span></p>
+                <p><strong>Correo Electrónico:</strong> <span id="correo">C23236211@utp.edu.pe</span></p>
+                <p><strong>Ubicación:</strong> <span id="ubicacion">Lima, Perú</span></p>
+                <p><strong>Biografía:</strong> <span id="bio">Me gusta enseñar a mis alumnos con dedicación y paciencia.</span></p>
+            </div>
+            <!-- Sección de estadísticas -->
+            <div class="stats-acciones">
+                <div class="stats-usuario">
+                    <div class="stat">
+                        <a href="#publicaciones" class="label">Publicaciones</a><br>
+                        <a href="#publicaciones" class="number">3</a>
+                    </div>
+                    <div class="stat">
+                        <span class="label">Seguidos</span><br>
+                        <span class="number">4</span>
+                    </div>
+                    <div class="stat">
+                        <span class="label">Seguidores</span><br>
+                        <span class="number">40</span>
+                    </div>
+                </div>
+                <!-- Sección de botones de acciones del usuario -->
+                <div class="acciones-usuario">
+                    <button id="btn-seguir" class="btn-seguir">
+                        <img src="seguir.png" alt="Seguir" class="icono-btn"> Seguir
+                    </button>
+                    <button id="btn-mensaje" class="btn-mensaje">
+                        <img src="mensaje.png" alt="Mensaje" class="icono-btn"> Mensaje
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="publicaciones">
+        <h2>Publicaciones</h2>
+
+        <div class="publicaciones-container">
+            <div class="publicacion">
+                <h3>Innovación Verde</h3>
+                <img src="imnovacion verde.png" alt="Descripción de la noticia 1">
+                <p>Varias universidades de renombre están liderando el camino hacia un futuro sostenible a través de la investigación y el desarrollo de tecnologías limpias</p>
+                <div class="acciones">
+                    <button class="btn-like">👍 0</button>
+                    <button class="btn-comentar">💬 Comentar</button>
+                </div>
+                <textarea class="comentario-input" placeholder="Escribe un comentario..."></textarea>
+            </div>
+
+            <div class="publicacion">
+                <h3>Rompiendo el Silencio</h3>
+                <img src="rompiendo el silencio.jpeg" alt="Descripción de la noticia 2">
+                <p>En respuesta a la creciente por la salud mental en el entorno académico, muchas universidades han implementado programas de apoyo integral
+                </p>
+                <div class="acciones">
+                    <button class="btn-like">👍 0</button>
+                    <button class="btn-comentar">💬 Comentar</button>
+                </div>
+                <textarea class="comentario-input" placeholder="Escribe un comentario..."></textarea>
+            </div>
+
+            <div class="publicacion">
+                <h3>Emprendimiento en el aula</h3>
+                <img src="emprendimiento.jpeg" alt="Descripción de la noticia 3">
+                <p>Con el objetivo de fomentar el espíritu emprendedor, diversas universidades han establecido incubadoras de startups que ofrecen recursos y mentoría a estudiantes con ideas innovadoras.</p>
+                <div class="acciones">
+                    <button class="btn-like">👍 0</button>
+                    <button class="btn-comentar">💬 Comentar</button>
+                </div>
+                <textarea class="comentario-input" placeholder="Escribe un comentario..."></textarea>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mi Red Social</p>
+    </footer>
+    <script src="usuario.js"></script>
+</body>
+
+</html>

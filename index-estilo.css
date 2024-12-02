@@ -1,0 +1,714 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #701603;
+
+    color: var(--clr-toggle-button);
+    
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Encabezado y navegación */
+.barranavega {
+    background-image:url(imagenutp4.jpg);
+    background-size:contain;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.barranavega img {
+    max-height: 100px;
+    margin-bottom: 5px;
+}
+
+.barranavega h1 {
+    flex: 1 1 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.links li {
+    margin-right: 20px;
+}
+
+.links a {
+    color: white;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    padding: 10px 15px;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: background-color 0.3s;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.links :hover {
+    background-color: #ff2828;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+/* Ícono links */
+.links img {
+    width: 20px;
+    /* Tamaño pequeño para la imagen */
+    height: 20px;
+    margin-right: 5px;
+    /* Espacio entre la imagen y el texto */
+    vertical-align: middle;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color:white;
+    background-image: url(utp001.png);
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.7);
+    color: black;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Sección principal y artículos */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(255, 196, 196);
+    border-radius: 5px;
+}
+
+section#inicio {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+section#inicio .articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+article h3 {
+    margin-top: 10px;
+}
+
+article p {
+    margin: 10px 0;
+}
+
+article a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/*Estilo para Formulario de publicación*/
+.post-form-container {
+    max-width: 600px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.preview {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preview img,
+.preview video {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.post-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    display: none;
+    /* Oculta el formulario por defecto */
+}
+
+.post-form-container.active {
+    display: block;
+    /* Muestra el formulario cuando tiene la clase 'active' */
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* modificar el texto de la seccion de crear publicacion*/
+label {
+    margin-bottom: 5px;
+    text-align: left;
+    color: #f6ffff;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+
+#noticias {
+    margin: 20px;
+    padding: 20px;
+    background-color: #e8efef;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de noticias */
+.noticias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilo para cada noticia */
+.noticia {
+    background-color: #faf5f5f4;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(30% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Transición más fluida */
+}
+
+.noticia:hover{
+    transform: scale(1.06); /* Aumenta el tamaño de la publicación en un 10% */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra más prominente y difusa */
+
+
+
+}
+
+.noticia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.noticia h3 {
+    margin: 0;
+}
+
+.noticia a {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
+.noticia p {
+    margin: 5px 0;
+}
+
+
+
+/* Publicaciones */
+#publicaciones {
+    margin-top: 30px;
+}
+
+#publicaciones h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.publicacion h3 {
+    margin: 10px 0;
+}
+
+.publicaciones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.publicacion {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Transición más fluida */
+}
+
+.publicacion:hover {
+    transform: scale(1.06); /* Aumenta el tamaño de la publicación en un 10% */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra más prominente y difusa */
+}
+
+.publicacion h3 a {
+    font-size: 18px;
+    color: #fbf8f8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.publicacion h3 a:hover {
+    color: #007bff;
+}
+
+.publicacion img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.publicacion p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.publicacion button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.publicacion button:hover {
+    background-color: #0056b3;
+}
+
+.publicacion .acciones-publicacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Botones para publicaciones */
+.btn-like {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-like.liked {
+    background-color: #ffce00; /* Color cuando está en modo "like" */
+}
+
+.btn-comentarios {
+    background-color: #4caf50;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.comentario-input {
+    display: none; /* Ocultar por defecto */
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    margin-top: 10px;
+    resize: none;
+    box-sizing: border-box; /* No salirse del box */
+}
+
+/* modifica el dise;o del comentario de las publicaciones creadas */
+.comments-list{
+color: #000204;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*avance semana 15*/
+/*modifica los escritos despues de crear la publicacion*/
+.hola {
+    color: #070303;
+    font-size: 14px;
+    margin: 5px 0;
+    font-family: Arial, sans-serif;
+    justify-content: space-between;
+    width: 60%;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+.align-left {
+    text-align: left;
+}
+
+
+
+.custom-button {
+    background-color: #007BFF; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+input[type="file"] {
+    display: none; 
+}
+.custom-button:hover {
+    background-color: #0056b3; 
+}
+
+
+
+.posts-list img {
+    
+   max-height: 700px;
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+   border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    max-width: 500px; 
+
+}
+
+
+.post-comments {
+    margin: 5px 0 0;
+}
+
+
+
+button[data-special="true"] {
+    background-color: yellow; 
+    font-weight: bold; 
+}
+
+
+/*efectos de colores para la seccion de subir imagenes*/
+.custom-button:hover {
+    animation: color-change 1.5s infinite alternate;
+}
+
+
+
+main {
+    flex: 1; 
+}
+
+
+
+.post-form-container {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    width: 300px; 
+}
+
+
+button {
+    width: 30%; 
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00bcd4;
+    color: #fff;
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.preview-image {
+    
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
+
+#fileInput{
+   
+color: #acbed1;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+/* Estilo para el formulario */
+#postForm {
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    max-width: 600px; /* Ancho máximo para el formulario */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las publicaciones */
+#postsList {
+    display: flex; /* Usamos flex para alinear en columna */
+    flex-direction: column; /* Alineación vertical */
+    gap: 20px; /* Espacio entre publicaciones */
+    
+}
+
+
+
+
+.contenedor {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    align-items: center;
+    height: 100vh; 
+    background-color: #f0f0f0; 
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+/* Contenedor general: Centrar todo */
+.content-container {
+    width: 90%; /* Ancho del 90% del viewport */
+    max-width: 500px; /* Ancho máximo */
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+    gap: 20px; /* Espacio entre el formulario y las publicaciones */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px;
+
+    align-items: center; /* Centrar contenido horizontalmente */
+    justify-content: center; /* Centrar contenido verticalmente */
+    min-height: 100vh; /* Altura mínima de toda la ventana */
+    box-sizing: border-box; /* Incluir padding en las dimensiones */
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo para cada publicación */
+.post {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 100px;
+    background-color: #0ac1b7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Transición más fluida */
+}
+
+/* Efecto al pasar el mouse sobre la publicación */
+.post:hover {
+    transform: scale(1.04); /* Aumenta el tamaño de la publicación en un 10% */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra más prominente y difusa */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-button{
+    margin: 100px;
+    padding: 25px 60px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    left: 450px;
+  }
+  .toggle-button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  /* glow */
+  .toggle-button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position:  absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .toggle-button:hover::before {
+    opacity: 1;
+  }
+  
+  .toggle-button:active:after {
+    background: transparent;
+  }
+  
+  .toggle-button:active {
+    color: #000;
+    font-weight: bold;
+  }

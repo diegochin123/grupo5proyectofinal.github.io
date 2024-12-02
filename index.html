@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Social Miniatura - Inicio</title>
+    <link rel="stylesheet" href="index-estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="barranavega">
+            <!-- La barra de navegación contiene el logo y los enlaces principales para los accesos rápidos -->
+            <img src="red_social1.png" alt="Descripción de la imagen de la red social" />
+            <h1>Bienvenido a Mi Red Social</h1>
+            <!-- Título h1 -->
+            <ul class="links">
+                <!-- Lista de enlaces para las secciones de la red social -->
+                <li><a href="index.html"><img src="inicio.png" alt="Inicio">Inicio</a></li>
+                <li><a href="perfil.html"><img src="perfil.png" alt="Perfil">Perfil</a></li>
+                <li><a href="seguidos.html"><img src="seguir.png" alt="Seguidos">Seguidos</a></li>
+                <li><a href="mensajes.html"><img src="mensaje.png" alt="Mensaje">Mensajes</a></li>
+                <!-- Enlaces externo al UTP+class y UTP portal, se abre en una nueva pestaña -->
+                <li><a href="https://class.utp.edu.pe" target="_blank"><img src="favicon.ico" alt="UTP"
+                            class="icono-btn">UTP+class</a></li>
+                <li><a href="https://portal.utp.edu.pe" target="_blank"><img src="favicon.ico" alt="UTP"
+                            class="icono-btn">UTP+Portal</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="inicio">
+        <h2>Noticias del día</h2>
+        <!-- Sección que muestra las noticias del día -->
+        <div class="noticias-container">
+            <!-- Contenedor para las noticias -->
+            <div class="noticia">
+                <!-- Cada noticia tiene un título e imagen con un enlace -->
+                <h3><a
+                        href="https://depor.com/futbol-internacional/chile/revelan-el-porque-chile-no-puede-despedir-a-gareca-su-continuidad-parece-estar-asegurada-noticia/?ref=depr#google_vignette'">Revelan
+                        el porqué Chile no puede despedir a Gareca</a></h3>
+                <img src="noticia1.jpg" alt="Descripción de la noticia 1">
+                <p>A pesar de ser uno de los principales responsables de la crisis en la selección de Chile, el
+                    entrenador argentino seguiría en el banquillo para la siguiente fecha doble de Eliminatoria...</p>
+                <button
+                    onclick="window.location.href='https://depor.com/futbol-internacional/chile/revelan-el-porque-chile-no-puede-despedir-a-gareca-su-continuidad-parece-estar-asegurada-noticia/?ref=depr#google_vignette'">Leer
+                    más</button>
+            </div>
+            <div class="noticia">
+                <h3><a
+                        href="https://elcomercio.pe/respuestas/que/uni-ofrece-becas-para-postular-gratis-en-examen-de-admision-2025-i-como-acceder-y-cuales-son-los-requisitos-tdpe-noticia/#google_vignette">UNI
+                        ofrece becas en Examen de Admisión 2025 - I</a></h3>
+                <img src="noticia2.jpg" alt="Descripción de la noticia 2">
+                <p>El próximo 8 de diciembre, la Universidad Nacional de Ingeniería (UNI) llevará a cabo su examen de
+                    admisión 2025-I de la modalidad de Ingreso Escolar Nacional (IEN), la cual está dirigido a los
+                    escolares...</p>
+                <button
+                    onclick="window.location.href='https://elcomercio.pe/respuestas/que/uni-ofrece-becas-para-postular-gratis-en-examen-de-admision-2025-i-como-acceder-y-cuales-son-los-requisitos-tdpe-noticia/#google_vignette'">Leer
+                    más</button>
+            </div>
+            <div class="noticia">
+                <h3><a
+                        href="https://elcomercio.pe/mundo/latinoamerica/javier-milei-dice-que-la-universidad-publica-de-argentina-no-esta-en-discusion-pero-no-cedera-a-reclamos-auditoria-general-de-la-nacion-agn-sigen-buenos-aires-ultimas-noticia/">Milei
+                        dice que la universidad pública argentina “no está en discusión”</a>
+                </h3>
+                <img src="noticia3.jpg" alt="Descripción de la noticia 3">
+                <p>“Acá no está en discusión la universidad pública ni que sea no arancelada. Eso no se toca”, dijo el
+                    presidente en una entrevista. “Gratuita no es, alguien la está pagando, la pagan los que no van”....
+                </p>
+                <button
+                    onclick="window.location.href='https://elcomercio.pe/mundo/latinoamerica/javier-milei-dice-que-la-universidad-publica-de-argentina-no-esta-en-discusion-pero-no-cedera-a-reclamos-auditoria-general-de-la-nacion-agn-sigen-buenos-aires-ultimas-noticia/'">Leer
+                    más</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="publicaciones">
+        <!-- Sección de publicaciones recientes donde los usuarios pueden interactuar -->
+        <h2>Publicaciones Recientes</h2>
+        <div class="publicaciones-container">
+            <!-- Contenedor para las publicaciones -->
+            <div class="publicacion">
+               
+
+
+
+
+                <h3>Innovación Verde</h3>
+                <img src="imnovacion verde.png" alt="Descripción de la noticia 1">
+                <p>Varias universidades de renombre están liderando el camino hacia un futuro sostenible a través de la
+                    investigación y el desarrollo de tecnologías limpias</p>
+                <div class="acciones">
+                    <!-- Botones para interactuar con la publicación like y comentar -->
+                    <button class="btn-like">👍 0</button>
+                    <button class="btn-like">👎0</button>
+                    <div class="comment-section">
+                        <button id="specialCommentButton" onclick="toggleCommentForm(this)">💬 Comentar</button>
+                        <div class="comment-form" style="display: none;">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button onclick="addComment(this)">Enviar</button>
+                        </div>
+                        <div class="comments-list"></div>
+                    </div>
+    
+
+
+
+                   
+                </div>
+                <textarea class="comentario-input" placeholder="Escribe un comentario..."></textarea>
+                <!-- Área de texto para poder escribir un comentario, aparece cuando le damos clic a comentar -->
+            </div>
+
+            <div class="publicacion">
+                <h3>Rompiendo el Silencio</h3>
+                <img src="rompiendo el silencio.jpeg" alt="Descripción de la noticia 2">
+                <p>En respuesta a la creciente por la salud mental en el entorno académico, muchas universidades han
+                    implementado programas de apoyo integral.</p>
+                <div class="acciones">
+                    <button class="btn-like">👍 0</button>
+                    <button class="btn-like">👎0</button>
+                    <div class="comment-section">
+                        <button id="specialCommentButton" onclick="toggleCommentForm(this)">💬 Comentar</button>
+                        <div class="comment-form" style="display: none;">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button onclick="addComment(this)">Enviar</button>
+                        </div>
+                        <div class="comments-list"></div>
+                    </div>
+    
+                </div>
+                <textarea class="comentario-input" placeholder="Escribe un comentario..."></textarea>
+            </div>
+
+            <div class="publicacion">
+                <h3>Emprendimiento en el aula</h3>
+                <img src="emprendimiento.jpeg" alt="Descripción de la noticia 3">
+                <p>Con el objetivo de fomentar el espíritu emprendedor, diversas universidades han establecido
+                    incubadoras de startups que ofrecen recursos y mentoría a estudiantes con ideas innovadoras.</p>
+                <div class="acciones">
+                    <button class="btn-like">👍 0</button>
+                    <button class="btn-like">👎0</button>
+                    <div class="comment-section">
+                        <button id="specialCommentButton" onclick="toggleCommentForm(this)">💬 Comentar</button>
+                        <div class="comment-form" style="display: none;">
+                            <input type="text" class="comment-input" placeholder="Escribe un comentario..." required>
+                            <button onclick="addComment(this)">Enviar</button>
+                        </div>
+                        <div class="comments-list"></div>
+                    </div>
+                </div>
+                <textarea class="comentario-input" placeholder="Escribe un comentario..."></textarea>
+            </div>
+        </div>
+    </section>
+    <button class="toggle-button" onclick="toggleForm()">Crear Nueva Publicación</button>
+    <!-- Botón que al hacer clic muestra un formulario para crear nuevas publicaciones -->
+    <div class="content-container">
+      
+
+        <div class="post-form-container" id="post-form-container">
+            <h3>Crear Nueva Publicación</h3>
+
+            <form id="uploadForm">
+
+                
+                <!-- Campos para ingresar datos de la publicación -->
+                <label for="post-title">Título:</label>
+                <input type="text" id="post-title" name="post-title" required>
+                <label for="post-description">Descripción:</label>
+                <input type="text" id="post-description" name="post-description">
+                <label for="fileInput" class="custom-button">Subir Imágenes o Videos:</label>
+                <input type="file" id="fileInput" accept="image/, video/" multiple required>
+                <!-- Contenedor para mostrar las vistas previas de las imágenes -->
+                <div class="preview-container" id="previewContainer"></div>
+                <button type="submit">Subir</button>
+                <!-- Botón para enviar el formulario -->
+                
+            </form>
+        </div>
+
+    <div id="postsList" class="posts-list  ">
+            <!-- Aquí van a aparecer las publicaciones que hagamos -->
+    </div> 
+        
+       
+    </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Mi Red Social</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <!-- Enlazamos un archivo JavaScript externo para manejar la funcionalidad interactiva (decidimos adelantarnos un poco en esta parte)-->
+</body>
+
+</html>

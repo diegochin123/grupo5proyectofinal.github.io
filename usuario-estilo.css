@@ -1,0 +1,386 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #70160E;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Encabezado y navegación */
+.barranavega {
+    background-image:url(imagenutp4.jpg);
+    background-size:contain;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.barranavega img {
+    max-height: 100px;
+    margin-bottom: 5px;
+}
+
+.barranavega h1 {
+    flex: 1 1 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.links li {
+    margin-right: 20px;
+}
+
+.links a {
+    color: white;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    padding: 10px 15px;
+    flex: 1 1 auto;
+    text-align: center;
+    transition: background-color 0.3s;
+    min-width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.links :hover {
+    background-color: #ff2828;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+}
+
+/* Ícono links */
+.links img {
+    width: 20px;
+    /* Tamaño pequeño para la imagen */
+    height: 20px;
+    margin-right: 5px;
+    /* Espacio entre la imagen y el texto */
+    vertical-align: middle;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Contenedor de la imagen y la información del perfil */
+section {
+    margin: 20px;
+    padding: 20px;   
+    border-radius: 5px;
+}
+
+
+
+#perfil {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 196, 196);
+}
+
+.perfil-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #161917;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+/* Imagen de perfil */
+.imagen-perfil {
+    align-self: center;
+}
+
+.imagen-perfil img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #ff0000;
+}
+
+/* Información del usuario */
+.info-usuario {
+    flex: 1.3;
+    padding-left: 10px;
+}
+
+.stats-acciones {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.stats-usuario {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    flex: 2;
+}
+.stats-usuario a.number {
+    color: #333;
+    text-decoration: none;
+}
+.stats-usuario a.number:hover {
+    text-decoration: underline;
+}
+
+.stat {
+    margin: 0 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.number {
+    font-size: 3em;
+    color: #333;
+}
+
+/* Botón de seguir y mensaje*/
+.acciones-usuario {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    margin-top: 50px;
+}
+
+.acciones-usuario button {
+    max-width: 150px;
+    margin: 0 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-seguir,
+.btn-mensaje{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+
+/* Ícono para botones */
+.btn-seguir .icono-btn,
+.btn-mensaje .icono-btn{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Estilo específico para el botón de seguir */
+.btn-seguir {
+    background-color: #007bff;
+}
+
+.btn-seguir:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de mensaje */
+.btn-mensaje {
+    background-color: #28a745;
+}
+
+.btn-mensaje:hover {
+    background-color: #218838;
+}
+
+/* Publicaciones */
+#publicaciones {
+    margin-top: 30px;
+    background-color: rgb(255, 196, 196);
+}
+
+#publicaciones h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.publicacion h3 {
+    margin: 10px 0;
+}
+
+.publicaciones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.publicacion {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.publicacion:hover {
+    transform: translateY(-5px);
+}
+
+.publicacion h3 a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.publicacion h3 a:hover {
+    color: #007bff;
+}
+
+.publicacion img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.publicacion p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.publicacion button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.publicacion button:hover {
+    background-color: #0056b3;
+}
+
+.publicacion .acciones-publicacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Botones para publicaciones */
+.btn-like {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-like.liked {
+    background-color: #ffce00; /* Color cuando está en like */
+}
+
+.btn-comentarios {
+    background-color: #4caf50;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.comentario-input {
+    display: none; /* Ocultar por defecto */
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    resize: none;
+    box-sizing: border-box; /* No salirse del box */
+}
+
+/* Adaptación para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .publicaciones-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .perfil-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .stats-usuario {
+        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .perfil-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .number {
+        font-size: 2em;
+    }
+}
