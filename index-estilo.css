@@ -239,12 +239,15 @@ input[type="text"] {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Contenedor de noticias */
 .noticias-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    /* creamos un contenedor de cuadriculas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+    /*seleccionamos el dise;o de la columna ,el repeat */
+    gap: 20px; /* selcciona un espacio de filas  y columnas de  20px*/
 }
+
+
 
 /* Estilo para cada noticia */
 .noticia {
@@ -303,6 +306,8 @@ input[type="text"] {
 
 .publicacion h3 {
     margin: 10px 0;
+   
+
 }
 
 .publicaciones-container {
@@ -422,7 +427,7 @@ color: #000204;
 
 
 
-/*avance semana 15*/
+
 /*modifica los escritos despues de crear la publicacion*/
 .hola {
     color: #070303;
@@ -468,12 +473,12 @@ input[type="file"] {
 
 .posts-list img {
     
-   max-height: 700px;
+   max-height: 550px;
     background: rgba(255, 255, 255, 0.1); 
     padding: 20px;
    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
-    max-width: 500px; 
+    max-width: 400px; 
 
 }
 
@@ -498,7 +503,7 @@ button[data-special="true"] {
 
 
 main {
-    flex: 1; 
+    flex:1 ; 
 }
 
 
@@ -509,6 +514,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
     width: 300px; 
+    
 }
 
 
@@ -596,6 +602,8 @@ color: #acbed1;
     justify-content: center; /* Centrar contenido verticalmente */
     min-height: 100vh; /* Altura mínima de toda la ventana */
     box-sizing: border-box; /* Incluir padding en las dimensiones */
+
+    margin-top: 200px;
 }
 
 
@@ -604,6 +612,16 @@ color: #acbed1;
 
 
 
+/* Contenedor principal para las publicaciones */
+.posts-list {
+    display: flex; /* Activar Flexbox */
+    flex-wrap: wrap; /* Permitir que las publicaciones se ajusten a nuevas filas si el espacio es insuficiente */
+    gap: 16px; /* Espacio entre las publicaciones */
+    justify-content: center; /* Centrar las publicaciones horizontalmente */
+    align-items: flex-start; /* Alinear las publicaciones al inicio verticalmente */
+    padding: 20px; /* Espaciado alrededor del contenedor */
+    background-color: #701603; /* Fondo del contenedor */
+}
 
 
 
@@ -611,9 +629,10 @@ color: #acbed1;
 .post {
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 100px;
-    background-color: #0ac1b7;
+    padding: 20px;
+    background-color: #1293cf;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Transición más fluida */
 }
 
@@ -644,22 +663,39 @@ color: #acbed1;
 
 
 
-
-
-
-.toggle-button{
-    margin: 100px;
-    padding: 25px 60px;
-    font-size: 25px;
-    border: none;
-    outline: none;
-    color: #FFF;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 12px;
-    left: 450px;
+/* Contenedor con Flexbox */
+.button-container {
+    display: flex;
+    justify-content: center;  /* Centra el botón horizontalmente */
+    align-items: center;  /* Centra el botón verticalmente */
+    height: 20vh;        /* Hace que el contenedor ocupe toda la altura de la pantalla */
+    width: 100%;              /* Hace que el contenedor ocupe todo el ancho */
+    margin: 0;
+    position: absolute;       /* Asegura que el contenedor se mantenga en la misma posición */
   }
+  
+  /* Estilo del botón */
+  .toggle-button {
+     
+      padding: 20px 50px;       /* Tamaño del padding del botón */
+      font-size: 25px;          /* Tamaño de la fuente */
+      border: none;             /* Elimina el borde */
+      outline: none;            /* Elimina el borde al hacer clic */
+      color: #FFF;              /* Color del texto */
+      cursor: pointer;         /* Muestra un cursor de mano */
+      position: relative;       /* Posición relativa para efectos de sombra */
+      z-index: 0;               /* Z-index para manejar las capas */
+      border-radius: 12px;      /* Bordes redondeados */
+      display: flex;            /* Utilizamos Flexbox dentro del botón */
+      justify-content: center;  /* Centra el texto horizontalmente */
+      align-items: center;      /* Centra el texto verticalmente */
+      width: auto;              /* Ajusta el ancho según el contenido */
+      min-width: 200px;         /* Establece un ancho mínimo para el botón */
+      height: auto;            /* Ajusta la altura según el contenido */
+      min-height: 60px;         /* Establece una altura mínima */
+  }
+  
+ 
   .toggle-button::after {
     content: "";
     z-index: -1;
@@ -712,3 +748,64 @@ color: #acbed1;
     color: #000;
     font-weight: bold;
   }
+
+
+
+  /* Efecto de sombra */
+  .toggle-button::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+  }
+  
+  /* Efecto de resplandor */
+  .toggle-button::before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #FF0000, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 600%;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      filter: blur(8px);
+      animation: glowing 20s linear infinite;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+      opacity: 0;
+  }
+  
+  /* Animación de resplandor */
+  @keyframes glowing {
+      0% {background-position: 0 0;}
+      50% {background-position: 400% 0;}
+      100% {background-position: 0 0;}
+  }
+  
+  /* Hover para el resplandor */
+  .toggle-button:hover::before {
+      opacity: 1;
+  }
+  
+  /* Efecto activo */
+  .toggle-button:active:after {
+      background: transparent;
+  }
+  
+  .toggle-button:active {
+      color: #000;
+      font-weight: bold;
+  }
+  
+
