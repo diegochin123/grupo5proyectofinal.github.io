@@ -12,12 +12,12 @@
 
     <header>
         <div class="barranavega">
-            <!-- La barra de navegación contiene el logo y los enlaces principales para los accesos rápidos -->
+            <!-- La lista de navegación contiene el logo y los enlaces principales para los accesos rápidos -->
             <img src="red_social1.png" alt="Descripción de la imagen de la red social" />
             <h1>Bienvenido a Mi Red Social</h1>
-            <!-- Título h1 -->
+            
             <ul class="links">
-                <!-- Lista de enlaces para las secciones de la red social -->
+                <!-- creamos una lista de enlaces para las secciones de nuetsra red social  -->
                 <li><a href="index.html"><img src="inicio.png" alt="Inicio">Inicio</a></li>
                 <li><a href="perfil.html"><img src="perfil.png" alt="Perfil">Perfil</a></li>
                 <li><a href="seguidos.html"><img src="seguir.png" alt="Seguidos">Seguidos</a></li>
@@ -33,11 +33,11 @@
 
     <section id="inicio">
         <h2>Noticias del día</h2>
-        <!-- Sección que muestra las noticias del día -->
+        <!-- en esta seección que muestra las noticias del día -->
         <div class="noticias-container">
-            <!-- Contenedor para las noticias -->
+            <!-- contenedor para las noticias -->
             <div class="noticia">
-                <!-- Cada noticia tiene un título e imagen con un enlace -->
+                <!-- cada noticia tiene un título e imagen con un enlace -->
                 <h3><a
                         href="https://depor.com/futbol-internacional/chile/revelan-el-porque-chile-no-puede-despedir-a-gareca-su-continuidad-parece-estar-asegurada-noticia/?ref=depr#google_vignette'">Revelan
                         el porqué Chile no puede despedir a Gareca</a></h3>
@@ -78,10 +78,10 @@
 
 
     <section id="publicaciones">
-        <!-- Sección de publicaciones recientes donde los usuarios pueden interactuar -->
+        <!-- sección de publicaciones recientes donde los usuarios pueden interactuar -->
         <h2>Publicaciones Recientes</h2>
         <div class="publicaciones-container">
-            <!-- Contenedor para las publicaciones -->
+            <!-- contenedor para las publicaciones -->
             <div class="publicacion">
                
 
@@ -93,7 +93,7 @@
                 <p>Varias universidades de renombre están liderando el camino hacia un futuro sostenible a través de la
                     investigación y el desarrollo de tecnologías limpias</p>
                 <div class="acciones">
-                    <!-- Botones para interactuar con la publicación like y comentar -->
+                    <!-- botones para interactuar con la publicación like y comentar -->
                     <button class="btn-like">👍 0</button>
                     <button class="btn-like">👎0</button>
                     <div class="comment-section">
@@ -111,7 +111,7 @@
                    
                 </div>
                 <textarea class="comentario-input" placeholder="Escribe un comentario..."></textarea>
-                <!-- Área de texto para poder escribir un comentario, aparece cuando le damos clic a comentar -->
+                <!-- area de texto para poder escribir un comentario, aparece cuando le damos clic a comentar -->
             </div>
 
             <div class="publicacion">
@@ -157,9 +157,10 @@
         </div>
     </section>
 
+
     <div class="button-container">
         <button class="toggle-button" onclick="toggleForm()">Crear Nueva Publicación</button>
-    </div>
+    </div>    <!--creamos un boton con atribuito onclik esta vinculado al java  script  para poder crear la publicacion y nos manda a un formulario v  -->
 
 
     <div class="content-container">
@@ -171,30 +172,34 @@
             <form id="uploadForm">
 
                 
-                <!-- Campos para ingresar datos de la publicación -->
+                <!-- creacion de campos para ingresar datos de la publicación -->
                 <label for="post-title">Título:</label>
                 <input type="text" id="post-title" name="post-title" required>
                 <label for="post-description">Descripción:</label>
                 <input type="text" id="post-description" name="post-description">
                 <label for="fileInput" class="custom-button">Subir Imágenes o Videos:</label>
                 <input type="file" id="fileInput" accept="image/, video/" multiple required>
-                <!-- Contenedor para mostrar las vistas previas de las imágenes -->
+                <!-- aqui creamos un contenedor para mostrar las vistas previas de las imágenes -->
                 <div class="preview-container" id="previewContainer"></div>
                 <button type="submit">Subir</button>
-                <!-- Botón para enviar el formulario -->
+                <!-- le asignamos un boton  para enviar el formulario -->
                 
             </form>
         </div>
 
+
+
+
+
     <div id="postsList" class="posts-list  ">
-            <!-- Aquí van a aparecer las publicaciones que hagamos -->
+            <!-- aquí van a aparecer las publicaciones que hagamos -->
     </div> 
         
-       
+    
     </div>
     </section>
 
-    <!-- Pie de página -->
+    <!-- aqui va el pie de página -->
     <footer>
         <p>&copy; 2024 Mi Red Social</p>
     </footer>

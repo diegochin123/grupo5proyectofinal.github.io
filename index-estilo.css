@@ -180,7 +180,11 @@ article a:hover {
     flex-wrap: wrap;
 }
 
-.preview img,
+.preview img{
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
 .preview video {
     margin-right: 10px;
     margin-bottom: 10px;
@@ -346,6 +350,14 @@ input[type="text"] {
     border-radius: 10px;
 }
 
+
+
+.publicacion video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .publicacion p {
     font-size: 14px;
     color: #666;
@@ -371,7 +383,7 @@ input[type="text"] {
 .publicacion .acciones-publicacion {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 10px; 
 }
 
 /* Botones para publicaciones */
@@ -483,6 +495,23 @@ input[type="file"] {
 }
 
 
+.posts-list video {
+    
+    max-height: 550px;
+     background: rgba(255, 255, 255, 0.1); 
+     padding: 20px;
+    border-radius: 10px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+     max-width: 400px; 
+ 
+ }
+ 
+
+
+
+
+
+
 .post-comments {
     margin: 5px 0 0;
 }
@@ -538,6 +567,17 @@ button {
     margin-right: 10px; 
     border-radius: 5px; 
     border: 1px solid #ccc; 
+}
+
+
+.preview-video {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+
 }
 
 #fileInput{
