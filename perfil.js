@@ -79,7 +79,7 @@ document.querySelectorAll('.btn-comentar').forEach((boton) => {
 
 // Manejador para el botón "like"
 document.querySelectorAll('.btn-like').forEach(function (btn) {
-    let count = 0; // Inicializa el contador de likes
+    let count = 6; // Inicializa el contador de likes
 
     btn.addEventListener('click', function () {
         // Alterna el estado de "like"

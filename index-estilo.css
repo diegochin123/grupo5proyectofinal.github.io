@@ -9,7 +9,7 @@ body {
     padding: 0;
     background-color: #701603;
 
-    color: var(--clr-toggle-button);
+    color: var(--clr-toggle-button); /*es una variable reutilizable */
     
 }
 
@@ -707,9 +707,9 @@ color: #acbed1;
 .button-container {
     display: flex;
     justify-content: center;  /* Centra el botón horizontalmente */
-    align-items: center;  /* Centra el botón verticalmente */
-    height: 20vh;        /* Hace que el contenedor ocupe toda la altura de la pantalla */
-    width: 100%;              /* Hace que el contenedor ocupe todo el ancho */
+    align-items: center;  
+    height: 20vh;        
+    width: 100%;          
     margin: 0;
     position: absolute;       /* Asegura que el contenedor se mantenga en la misma posición */
   }
@@ -718,21 +718,21 @@ color: #acbed1;
   .toggle-button {
      
       padding: 20px 50px;       /* Tamaño del padding del botón */
-      font-size: 25px;          /* Tamaño de la fuente */
+      font-size: 25px;        
       border: none;             /* Elimina el borde */
-      outline: none;            /* Elimina el borde al hacer clic */
-      color: #FFF;              /* Color del texto */
-      cursor: pointer;         /* Muestra un cursor de mano */
+      outline: none;           
+      color: #FFF;        
+      cursor: pointer;        
       position: relative;       /* Posición relativa para efectos de sombra */
-      z-index: 0;               /* Z-index para manejar las capas */
-      border-radius: 12px;      /* Bordes redondeados */
+      z-index: 0;            
+      border-radius: 12px;      
       display: flex;            /* Utilizamos Flexbox dentro del botón */
-      justify-content: center;  /* Centra el texto horizontalmente */
-      align-items: center;      /* Centra el texto verticalmente */
-      width: auto;              /* Ajusta el ancho según el contenido */
-      min-width: 200px;         /* Establece un ancho mínimo para el botón */
-      height: auto;            /* Ajusta la altura según el contenido */
-      min-height: 60px;         /* Establece una altura mínima */
+      justify-content: center; 
+      align-items: center;      
+      width: auto;             
+      min-width: 200px;       
+      height: auto;           
+      min-height: 60px;       
   }
   
  
